@@ -5,5 +5,8 @@ labo_web:
 hello:
     path:     /hello/{name}
     defaults: { _controller: LaboWebBundle:Hello:index }    
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"    
 
 
