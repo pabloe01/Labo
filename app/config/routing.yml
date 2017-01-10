@@ -1,0 +1,9 @@
+labo_web:
+    resource: "@LaboWebBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+hello:
+    path:     /hello/{name}
+    defaults: { _controller: LaboWebBundle:Hello:index }    
+
+
