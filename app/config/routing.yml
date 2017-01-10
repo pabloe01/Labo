@@ -1,3 +1,8 @@
+my_fos_user:
+    resource: "@MyFOSUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 labo_web:
     resource: "@LaboWebBundle/Resources/config/routing.yml"
     prefix:   /

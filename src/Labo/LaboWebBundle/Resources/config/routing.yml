@@ -1,3 +1,3 @@
 labo_web_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: LaboWebBundle:Default:index }
+    path:     /dashboard
+    defaults: { _controller: LaboWebBundle:Dashboard:index }

@@ -1,0 +1,35 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block stylesheets %}
+    <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendors/nprogress/nprogress.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendors/animate.css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/laboweb/css/custom.min.css') }}" rel="stylesheet" />
+{% endblock %}        
+</head>
+<body class="login">
+
+        {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+        <div class="flash-{{ type }}">
+                        {{ message }}
+            </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+            <div class="login_wrapper">
+                <div class="animate form login_form">
+                    <section class="login_content">
+{{ include('MyFOSUserBundle:Security:login_content.html.twig') }}
+                        </section>
+                    </div>
+                </div>
+            </body>
+        </html>
